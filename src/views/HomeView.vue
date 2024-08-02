@@ -21,7 +21,6 @@
   import { ref } from 'vue';
   import CNPJForm from '@/components/Company/CnpjForm.vue';
   import Company from '@/components/Company/Main.vue';
-  import axios from 'axios';
   import axiosBusiness from '@/api/axiosBusiness'; // Importa a instância do axios
 
   const searched = ref(false);
@@ -29,19 +28,20 @@
   
   const fetchCompanyInfo = async (cnpj) => {
     try {
-        // get url by .env`
         cnpj = cnpj.replace(/[^0-9]/g, '');
         const response = await axiosBusiness.get(`/api/company/${cnpj}`, {
             headers: {
                 'Content-Type': 'application/json',
             }
         });
-        console.log('response', response);
         company.value = response.data.data;
         searched.value = true;
     } catch (error) {
-        console.log('error', error.response.data['error']);
-        alert('Erro ao buscar informações da empresa: ' + error.response.data.error);
+        let message = 'Erro ao buscar informações da empresa';
+        if (error.response) {
+            message +=  ': ' + error.response.data.error;
+        }
+        alert(message);
     }
 };
 
