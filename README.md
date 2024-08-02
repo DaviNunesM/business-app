@@ -15,3 +15,9 @@ npm run dev
 ```sh
 npm run build
 ```
+
+## Project Setup with Docker
+
+```sh
+docker compose up -d
+```
