@@ -29,8 +29,7 @@
     import CompanyInfo from '@/components/Company/Info.vue';
     import CompanyEconomicActivities from '@/components/Company/EconomicActivities.vue';
     import CompanyPartners from '@/components/Company/Partners.vue';
-    import { defineProps } from 'vue';
-
+    
     const props = defineProps({
     company: {
             type: Object,
