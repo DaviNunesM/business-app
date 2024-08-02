@@ -9,7 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.4.29",
+    "@popperjs/core": "^2.11.8",
+    "axios": "^1.7.3",
+    "bootstrap": "^5.3.3",
+    "maska": "^3.0.0",
+    "vue": "^3.4.35",
     "vue-router": "^4.3.3"
   },
   "devDependencies": {
