@@ -3,12 +3,12 @@
         <table class="table">
             <thead>
                 <tr>
-                <th class="fw-bold" scope="col">Código</th>
-                <th class="fw-bold" scope="col">Descrição</th>
+                <th class="fw-bold" scope="col" style="width: 20%;">Código</th>
+                <th class="fw-bold" scope="col" style="width: 80%;">Descrição</th>
                 </tr>
             </thead>
             <tbody>
-                <tr class="table-primary">
+                <tr class="table-primary table-responsive">
                     <td>{{ $formatter.formatCnae(company.main_activity) || '-' }}</td>
                     <td>{{ company.main_activity_description || '-' }}</td>
                 </tr>
