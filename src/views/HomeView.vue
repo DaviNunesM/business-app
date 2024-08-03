@@ -28,6 +28,8 @@
   
   const fetchCompanyInfo = async (cnpj) => {
     try {
+    console.log('baseurl' + import.meta.env.VITE_API_BASE_URL);
+
         cnpj = cnpj.replace(/[^0-9]/g, '');
         console.log(axiosBusiness);
         const response = await axiosBusiness.get(`/api/company/${cnpj}`);
