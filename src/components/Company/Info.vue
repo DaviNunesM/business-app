@@ -11,11 +11,11 @@
         </tr>
         <tr>
             <th class="fw-bold" scope="row">Data de Abertura</th>
-            <td>{{ company.activity_start_date }}</td>
+            <td>{{ $formatter.formatDate(company.activity_start_date) }}</td>
         </tr>
         <tr>
             <th class="fw-bold" scope="row">Última Atualização</th>
-            <td>{{ company.registration_status_date || '-' }}</td>
+            <td>{{ $formatter.formatDate(company.registration_status_date) || '-' }}</td>
         </tr>
         <tr>
             <th class="fw-bold" scope="row">Logradouro</th>
@@ -31,7 +31,7 @@
         </tr>
         <tr>
             <th class="fw-bold" scope="row">CEP</th>
-            <td>{{ company.address.postal_code || '-' }}</td>
+            <td>{{ $formatter.formatPostal(company.address.postal_code) || '-' }}</td>
         </tr>
         <tr>
             <th class="fw-bold" scope="row">Bairro</th>
@@ -47,11 +47,11 @@
         </tr>
         <tr>
             <th class="fw-bold" scope="row">Telefone</th>
-            <td>{{ company.phone_number || '-' }}</td>
+            <td>{{ $formatter.formatPhone(company.phone_number) || '-' }}</td>
         </tr>
         <tr>
             <th class="fw-bold" scope="row">Capital Social</th>
-            <td>{{ company.share_capital || '-' }}</td>
+            <td>{{ $formatter.formatMoney(company.share_capital) || '-' }}</td>
         </tr>
         </tbody>
     </table>
@@ -64,4 +64,5 @@
         default: () => ({})
     }
     });
+
 </script>

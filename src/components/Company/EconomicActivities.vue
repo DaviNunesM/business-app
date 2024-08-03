@@ -9,11 +9,11 @@
             </thead>
             <tbody>
                 <tr class="table-primary">
-                    <td>{{ company.main_activity || '-' }}</td>
+                    <td>{{ $formatter.formatCnae(company.main_activity) || '-' }}</td>
                     <td>{{ company.main_activity_description || '-' }}</td>
                 </tr>
                 <tr v-for="(act, index) in company.secundary_activities" :key="index">
-                    <td>{{ act.code || '-' }}</td>
+                    <td>{{ $formatter.formatCnae(act.code) || '-' }}</td>
                     <td>{{ act.description || '-' }}</td>
                 </tr>
             </tbody>
