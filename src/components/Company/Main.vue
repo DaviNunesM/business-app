@@ -19,7 +19,7 @@
                 <CompanyEconomicActivities :company="company" />
             </div>
             <div class="tab-pane fade" id="socios" role="tabpanel" aria-labelledby="socios-tab">
-                <CompanyPartners :company="company" />
+                <CompanyPartners :partners="company.partners" />
             </div>
         </div>
     </div>

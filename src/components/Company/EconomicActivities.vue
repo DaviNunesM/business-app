@@ -9,12 +9,12 @@
             </thead>
             <tbody>
                 <tr class="table-primary">
-                    <td>{{ company.cnae_fiscal || 'Não disponível' }}</td>
-                    <td>{{ company.cnae_fiscal_descricao || 'Não disponível' }}</td>
+                    <td>{{ company.main_activity || '-' }}</td>
+                    <td>{{ company.main_activity_description || '-' }}</td>
                 </tr>
-                <tr v-for="(cnae, index) in company.cnaes_secundarios" :key="index">
-                    <td>{{ cnae.codigo || 'Não disponível' }}</td>
-                    <td>{{ cnae.descricao || 'Não disponível' }}</td>
+                <tr v-for="(act, index) in company.secundary_activities" :key="index">
+                    <td>{{ act.code || '-' }}</td>
+                    <td>{{ act.description || '-' }}</td>
                 </tr>
             </tbody>
         </table>

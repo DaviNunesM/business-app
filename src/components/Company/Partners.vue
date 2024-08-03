@@ -8,9 +8,9 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="(socio, index) in company.qsa" :key="index">
-                    <td>{{ socio.nome_socio || 'Não disponível' }}</td>
-                    <td>{{ socio.cnpj_cpf_do_socio || 'Não disponível' }}</td>
+                <tr v-for="(partner, index) in partners" :key="index">
+                    <td>{{ partner.name || '-' }}</td>
+                    <td>{{ partner.cpf || '-' }}</td>
                 </tr>
             </tbody>
         </table>
@@ -19,7 +19,7 @@
 
 <script setup>
     const props = defineProps({
-        company: {
+        partners: {
             type: Object,
             default: () => ({})
         }
