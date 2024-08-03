@@ -31,7 +31,7 @@
         </tr>
         <tr>
             <th class="fw-bold" scope="row">CEP</th>
-            <td>{{ company.address.postal || '-' }}</td>
+            <td>{{ company.address.postal_code || '-' }}</td>
         </tr>
         <tr>
             <th class="fw-bold" scope="row">Bairro</th>
