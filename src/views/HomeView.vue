@@ -29,11 +29,8 @@
   const fetchCompanyInfo = async (cnpj) => {
     try {
         cnpj = cnpj.replace(/[^0-9]/g, '');
-        const response = await axiosBusiness.get(`/api/company/${cnpj}`, {
-            headers: {
-                'Content-Type': 'application/json',
-            }
-        });
+        console.log(axiosBusiness);
+        const response = await axiosBusiness.get(`/api/company/${cnpj}`);
         company.value = response.data.data;
         searched.value = true;
     } catch (error) {
