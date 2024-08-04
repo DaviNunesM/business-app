@@ -2,17 +2,7 @@
 
 ```sh
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
 npm run build
 ```
 
@@ -21,3 +11,6 @@ npm run build
 ```sh
 docker compose up -d
 ```
+
+
+### Access the project at http://localhost:5173
